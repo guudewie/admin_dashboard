@@ -1,7 +1,12 @@
 :root {
-    --blue: rgb(101, 128, 236);
+    --blue: #6580ec;
     --grey: rgb(245, 245, 250);
     --black: rgb(20, 19, 52);
+    --red-light: #f4e6e9;
+    --red: rgb(235, 88, 96);
+
+    --purple: #4e4ca6 ;
+    --padding-main: 5vw;
 
     font-family: 'Roboto', sans-serif;
 }
@@ -106,7 +111,8 @@ a {
     grid-column: 2 / 3;
 
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 50px 2fr;
+    gap: 2vw;
 }
 
 .search {
@@ -114,9 +120,9 @@ a {
     font-size: max(.8rem, 1.15vw);
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 1vw 5vw;
+    padding: 2vw 5vw;
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
@@ -138,23 +144,91 @@ input {
     color: aliceblue;
 }
 
-.welcome {
-    grid-template-rows: 2;
-    background: rgb(139, 140, 184);
+.bell-icon,
+.search-icon {
+    color: var(--black);
+    opacity: .85;
 }
 
-.bell-icon {
-    justify-self: flex-end;
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw var(--padding-main);
 }
+
+.welcome {
+    background: var(--red-light);
+    height: 13vw;
+    flex: 1;
+    border-radius: 2vw;
+    padding: 0vw 3vw;
+    gap: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.welcome-illustration {
+    width: 25vw;
+    position: absolute;
+    right: 5vw;
+    bottom: .5vw;
+}
+
+.welcome-container > * {
+    font-size: max(.8rem, 1.15vw);
+}
+
+.welcome-heading {
+    color: var(--red);
+    font-weight: 600;
+    margin-bottom: 2vw;
+    font-size: min(2rem, 3vw);
+}
+
+.welcome-text {
+    font-weight: 400;
+    font-size: min(1rem, 1.5vw);
+    opacity: .8;
+    line-height: 2.3vw;
+}
+
 
 
 /**********************     MAIN      ******************************/
 
 .main {
-    background: rgba(128, 128, 128, 0.511);
+    background: var(--grey);
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0vw var(--padding-main);
 }
 
+h1 {
+    font-size: min(1rem, 1.5vw);
+}
+
+.projects {
+    border: 1px solid rgb(130, 100, 100);
+
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    gap: 10px;
+}
+.announcements {
+    border: 1px solid rgb(140, 140, 205);
+}
+
+.trending {
+    border: 1px solid orange;
+}
 
 
