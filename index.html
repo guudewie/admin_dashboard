@@ -5,10 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="sidebar"></div>
-    <div class="header"></div>
+    <div class="sidebar">
+        <a href="" class="sidebar-item-container spacer">
+            <span class="material-symbols-outlined dashboard-logo">dashboard</span>
+            <div class="sidebar-item-text dashboard-text">Dashboard</div>
+        </a>
+        <a href="" class="sidebar-item-container home">
+            <span class="material-symbols-outlined home">home</span>
+            <div class="sidebar-item-text home" wght="100">Home
+                <div class="selector"></div>
+            </div>
+        </a>
+        <a href="" class="sidebar-item-container">
+            <span class="material-symbols-outlined">account_circle</span>
+            <div class="sidebar-item-text">Profile</div>
+        </a>
+        <a href="" class="sidebar-item-container">
+            <span class="material-symbols-outlined">sms</span>
+            <div class="sidebar-item-text">Messages</div>
+        </a>
+        <a href="" class="sidebar-item-container">
+            <span class="material-symbols-outlined">history</span>
+            <div class="sidebar-item-text">History</div>
+        </a>
+        <a href="" class="sidebar-item-container">
+            <span class="material-symbols-outlined">task</span>
+            <div class="sidebar-item-text">Tasks</div>
+        </a>
+        <a href="" class="sidebar-item-container spacer">
+            <span class="material-symbols-outlined">groups</span>
+            <div class="sidebar-item-text">Communities</div>
+        </a>
+        <a href="" class="sidebar-item-container">
+            <span class="material-symbols-outlined">settings</span>
+            <div class="sidebar-item-text">Settings</div>
+        </a>
+        <a href="" class="sidebar-item-container">
+            <span class="material-symbols-outlined">help</span>
+            <div class="sidebar-item-text">Support</div>
+        </a>
+        <a href="" class="sidebar-item-container">
+            <span class="material-symbols-outlined">security</span>
+            <div class="sidebar-item-text">Privacy</div>
+        </a>
+    </div>
+    <div class="header">
+        <div class="search">
+            <div class="container-search">
+                <span class="material-symbols-outlined search-icon">search</span>
+                <input type="text">
+            </div>
+            <div class="container-logout">
+                <span class="material-symbols-outlined bell-icon">notifications_active</span>
+                <span class="material-symbols-outlined bell-icon">logout</span>
+            </div>
+        </div>
+        <div class="welcome"></div>
+    </div>
     <div class="main"></div>
+
 </body>
 </html>
