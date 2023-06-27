@@ -1,0 +1,40 @@
+:root {
+    --blue: #2274a5;
+    --light-blue: #E9F1F7;
+    --black: #131B23;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    background-color: var(--blue);
+}
+
+.header {
+    background: white;
+    grid-column: 2 / 3;
+    z-index: 3;
+}
+
+.main {
+    background: var(--light-blue);
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+
+
+
