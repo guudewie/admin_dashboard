@@ -21,7 +21,7 @@ html {
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: auto 4fr;
     grid-template-rows: auto 1fr;
 }
 
@@ -188,7 +188,6 @@ input {
 
 .welcome.left {
     overflow: hidden;
-    border-left: 5px solid rgb(21, 50, 91);
 }
 
 .welcome-container.left {
@@ -291,7 +290,7 @@ input {
     grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 10px var(--padding-main);
-    gap: 15px;
+    gap: 2vw;
 }
 
 h1 {
@@ -308,7 +307,7 @@ h1 {
 .projects-container {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem
 }
 
@@ -321,8 +320,24 @@ h1 {
     padding: 12px;
   }
 
-.announcements {
+.announcements,
+.trending {
+    display: flex;
+    flex-direction: column;
+}
 
+.announcements-container,
+.trending-container {
+    background: white;
+    flex-grow: 1;
+
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 2vw;
+
+}
+
+h1 {
+    margin-left: 1.6vw;
 }
 
 .trending {
