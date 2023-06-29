@@ -289,7 +289,7 @@ input {
 
     display: grid;
     grid-template-columns: 2.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     padding: 10px var(--padding-main);
     gap: 2vw;
 }
@@ -310,27 +310,6 @@ h1 {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem
-}
-
-.announcements,
-.trending {
-    display: flex;
-    flex-direction: column;
-}
-
-.announcements-container,
-.trending-container {
-    background: white;
-    flex-grow: 1;
-
-    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
-    border-radius: .8vw;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
 }
 
 .project {
@@ -366,7 +345,6 @@ h1 {
     font-size: max(.8vw, .5rem);
     opacity: .8;
     height: 6vw;
-    align-self: start;
 }
 
 .project-heading {
@@ -393,12 +371,76 @@ h1 {
     opacity: .76;
 }
 
+.announcements,
+.trending {
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements-container,
+.trending-container {
+    background: white;
+    flex-grow: 1;
+
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+    border-radius: .8vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;    
+
+
+    padding: 1vw 2vw;
+
+}
+
 h1 {
     margin-left: 1.6vw;
+}
+
+.announ {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+
+}
+
+.line {
+    position: absolute;
+    top: 30%;
+    height: 8vw;
+    width: 80%;
+    border-top: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+}
+
+.announ.m {
+    border-top: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+}
+
+.announ.m,
+.announ.l {
+
+    padding-top: 1vw;
 }
 
 .trending {
 
 }
 
+.announ-heading{
+    font-weight: 700;
+    font-size: 1.1vw;
+    opacity: .8;
+    color: var(--black);
+}
 
+.announ-text{
+    font-weight: 300;
+    font-size: max(.8vw, .5rem);
+    opacity: .8;
+    height: 6vw;
+}
