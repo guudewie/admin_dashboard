@@ -9,6 +9,7 @@
     --padding-main: 5vw;
 
     font-family: 'Roboto', sans-serif;
+    
 }
 
 body,
@@ -304,21 +305,12 @@ h1 {
     gap: 10px;
 }
 
-.projects-container {
+.projects-grid {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem
 }
-
-.project {
-    background-color: #444;
-    text-align: center;
-    color: #ddd;
-    font-family: sans-serif;
-    font-size: 1.5rem;
-    padding: 12px;
-  }
 
 .announcements,
 .trending {
@@ -332,8 +324,73 @@ h1 {
     flex-grow: 1;
 
     box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 2vw;
+    border-radius: .8vw;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.project {
+    background: white;
+    flex: 1;
+    border-radius: .8vw;
+    padding: 1vw 2vw;
+    gap: .5vw;
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    position: relative;
+    overflow: hidden;
+}
+
+.stripe {
+    height: 100%;
+    width: .5vw;
+    background: rgb(27, 86, 164);
+
+    position: absolute;
+    left: 0px;
+
+}
+
+.project-text {
+    grid-row: 2 ;
+    grid-column: 1 / -1;
+
+    font-weight: 300;
+    font-size: max(.8vw, .5rem);
+    opacity: .8;
+    height: 6vw;
+    align-self: start;
+}
+
+.project-heading {
+    grid-row: 1;
+    grid-column: 1 / -1;
+
+
+    font-weight: 900;
+    font-size: 1.2vw;
+    opacity: .8;
+    color: var(--black);
+    white-space: nowrap;
+}
+
+.icons {
+    grid-row: 3 ;
+    grid-column: 2 / -1;
+
+    align-self: flex-end;
+}
+
+.icon {
+    height: max(.5vw, 1rem);
+    opacity: .76;
 }
 
 h1 {
