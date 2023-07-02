@@ -437,7 +437,8 @@ h1 {
 }
 
 .profile-pic {
-    height: 20px;
+    height: 23px;
+    width: auto;
     border-radius: 50%;
 }
 
